@@ -3,7 +3,10 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const planeSchema = new Schema({
-  text: String,
+  brand: String,
+  model: String,
+  year: Number,
+  content: String,
 }, {
   timestamps: true
 })

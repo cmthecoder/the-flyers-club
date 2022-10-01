@@ -1,0 +1,39 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <div>
+    <img
+      class="profile-avatar"
+      src="<%= profile.avatar %>" 
+      alt="<%= profile.name %>'s avatar"
+    >
+  </div>
+  <%# isSelf replaces profile._id.equals(user.profile._id) %> 
+  <% if (isSelf){ %>
+    <h1><em>"You Have Flight Control..."</em></h1>
+  <% } else { %>
+    <h1>It's <%= profile.name %>!</h1>
+  <% }%> 
+  
+  <% if (isSelf) { %>
+    <h2>Add a plane!</h2>
+    <form action="/profiles/<%= profile._id %>/planes" method="POST">
+      <label>
+        Brand:
+        <input type="text" name="brand" autocomplete="off">
+      </label>
+      <label>
+        Model:
+        <input type="text" name="model" autocomplete="off">
+      </label>
+      <label>
+        Year:
+        <input type="number" name="year" autocomplete="off">
+      </label>
+      <button type="submit">Add plane</button>
+    </form>
+  <% } %>
+
+
+<%- include('../partials/footer') %>
