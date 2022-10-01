@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const expSchema = new Schema({
+const planeSchema = new Schema({
   text: String,
 }, {
   timestamps: true
@@ -11,7 +11,7 @@ const expSchema = new Schema({
 const profileSchema = new Schema({
   name: String,
   avatar: String,
-  experiences: [expSchema],
+  planes: [planeSchema],
 }, {
   timestamps: true
 })
