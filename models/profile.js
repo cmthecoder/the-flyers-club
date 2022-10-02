@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const planeSchema = new Schema({
   brand: String,
   model: String,
-  year: Number,
+  color: String,
   content: String,
 }, {
   timestamps: true

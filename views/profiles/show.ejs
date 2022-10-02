@@ -28,12 +28,28 @@
         <input type="text" name="model" autocomplete="off">
       </label>
       <label>
-        Year:
-        <input type="number" name="year" autocomplete="off">
+        Color:
+        <input type="text" name="color" autocomplete="off">
       </label>
       <button type="submit">Add plane</button>
     </form>
   <% } %>
 
+
+  <% if (profile.planes.length) { %> 
+    <h2>
+      <%= isSelf ? "Here are the planes you have" : `Here are the planes ${profile.name} has` %> flown! 
+    </h2>
+    <% profile.planes.forEach(plane => { %>
+      <h3>
+        <%= plane.brand %> <%= plane.model %> <%= plane.color %>.   
+      </h3>
+    <% }) %>
+  <% } else { %>
+    <h2>
+      <%= isSelf ? "You" : `${profile.name}` %> haven't added a plane! 
+    </h2>
+  <% } %>
+</main> 
 
 <%- include('../partials/footer') %>
