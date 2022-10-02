@@ -7,7 +7,7 @@ const router = Router()
 router.get('/', isLoggedIn, profilesCtrl.index)
 router.get('/:id', isLoggedIn, profilesCtrl.show )
 router.post('/:id/planes', isLoggedIn, profilesCtrl.createPlane)
-
+router.delete('/planes/:id', isLoggedIn, profilesCtrl.deletePlane)
 
 export {
   router
