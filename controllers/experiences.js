@@ -2,6 +2,7 @@ import { Experience } from "../models/experience.js"
 
 function index(req, res) {
   Experience.find({})
+  .populate('owner')
   .then(experiences => {
     res.render('experiences/index', {
       experiences,
@@ -14,6 +15,18 @@ function index(req, res) {
   })
 }
 
+function create(req, res) {
+  Experience.create(req.body)
+  .then(experience => {
+    res.redirect('/experiences')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/experiences')
+  })
+}
+
 export {
   index,
+  create,
 }

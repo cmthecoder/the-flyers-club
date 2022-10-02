@@ -5,6 +5,7 @@ import * as experiencesCtrl from '../controllers/experiences.js'
 const router = Router()
 
 router.get('/', experiencesCtrl.index)
+router.post('/', experiencesCtrl.create)
 
 export {
   router
