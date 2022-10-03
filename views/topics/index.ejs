@@ -1,0 +1,31 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Club Members</h1>
+  <% if (user) { %>
+    <h2>Make a Change here</h2>
+    <form action="/topics" method="POST">
+      <label>
+        Topic:
+        <input type="text" name="text" autocomplete="off">
+      </label>
+      <button type="submit">Add topic</button>
+    </form>
+  <% } %>
+  <h2>Change This</h2>
+  <!-- Try adding ejs -->
+  <div>
+    <ul>
+      <% topics.forEach(topic => { %>
+        <img src="<%= topic.owner.avatar %>" alt="<%= topic.owner.name %>">
+        <li>  
+          <a href="/topics/<%= topic._id %>"><%= topic.text %></a>
+          </li>
+      <% }) %>
+    </ul>
+</div>
+</section> 
+
+
+<%- include('../partials/footer') %>

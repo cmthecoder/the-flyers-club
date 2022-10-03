@@ -42,7 +42,7 @@
     </h2>
     <% profile.planes.forEach(plane => { %>
       <h3>
-        <%= plane.brand %> <%= plane.model %> <%= plane.color %>.
+        <%= plane.brand %> <%= plane.model %> <%= plane.color %>
         <% if (isSelf) { %>
           <form 
             action="/profiles/planes/<%= plane._id %>?_method=DELETE"
