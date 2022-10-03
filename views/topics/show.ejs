@@ -1,0 +1,50 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+	<p>THE FLYERS CLUB</p>
+  <h1><%= topic.text %></h1>
+  <h2>Comments</h2>
+  <% if (user) { %>
+    <form 
+    id="add-review-form"
+    action="/topics/<%= topic._id %>/comments"
+    method="POST"
+  >
+    <label for="content-textarea">Comment:</label>
+    <textarea name="content" id="content-textarea"></textarea>
+    <button type="submit">Add Comment</button>
+  </form>
+  <% } %>
+
+
+
+
+
+
+  <% if (topic.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% topic.comments.forEach(function(comment) { %>
+          <tr>
+            <td><%= comment.createdAt.toLocaleDateString() %></td>
+            <td><%= comment.content %></td>
+          </tr>
+        <% }) %>
+        <tr>
+          <td colspan="2"></td>
+        </tr>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No Comments Yet</h3>
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>

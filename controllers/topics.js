@@ -31,7 +31,46 @@ function create(req, res) {
   })
 }
 
+function show(req,res) {
+  Topic.findById(req.params.id)
+  .populate('owner')
+  .then(topic => {
+    console.log('THIS A TOPIC', topic)
+    res.render('topics/show', {
+      topic,
+      title: '🛫'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/topics')
+  })
+}
+
+function createComment(req, res){
+  console.log("THIS IS BEFORE", req.body)
+  Topic.findById(req.params.id)
+  .then(topic => {
+    console.log('THIS IS AFTER', req.body)
+    topic.comments.push(req.body)
+    topic.save()
+    .then(() => {
+      res.redirect(`/topics/${topic._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   create,
+  show,
+  createComment,
 }
