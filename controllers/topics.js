@@ -20,7 +20,7 @@ function create(req, res) {
   // console.log('THIS IS A USER', req.user)
   req.body.owner = req.user.profile._id
   // console.log('BEFORE', req.body)
-  Experience.create(req.body)
+  Topic.create(req.body)
   .then(topic => {
     // console.log("AFTER", experience)
     res.redirect('/topics')
