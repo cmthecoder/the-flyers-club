@@ -69,9 +69,14 @@ function createComment(req, res){
   })
 }
 
+function deleteComment(req, res) {
+  console.log('delete comment')
+}
+
 export {
   index,
   create,
   show,
   createComment,
+  deleteComment,
 }

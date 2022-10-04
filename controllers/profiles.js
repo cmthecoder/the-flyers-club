@@ -59,9 +59,49 @@ function deletePlane(req, res) {
   })
 }
 
+function edit(req, res){
+  console.log(req.params)
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    const plane = profile.planes.id(req.params.planeId)
+    const isSelf = profile._id.equals(req.user.profile._id)
+    res.render('profiles/edit', {
+      profile,
+      title: "edit 🛫",
+      isSelf,
+      plane,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/profiles')
+  })
+}
+
+function update(req, res) {
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    const plane = profile.planes.id(req.params.planeId)
+    plane.brand = req.body.brand
+    plane.model = req.body.model
+    plane.color = req.body.color
+    profile.save()
+    .then(()=> {
+      res.redirect(`/profiles/${profile._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+
 export{
   index,
   show,
   createPlane,
   deletePlane,
+  edit,
+  update,
 }

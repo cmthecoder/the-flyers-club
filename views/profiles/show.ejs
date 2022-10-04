@@ -44,6 +44,7 @@
       <h3>
         <%= plane.brand %> <%= plane.model %> <%= plane.color %>
         <% if (isSelf) { %>
+          <a href="/profiles/<%= profile._id %>/planes/<%= plane._id %>/edit">Edit a plane</a>
           <form 
             action="/profiles/planes/<%= plane._id %>?_method=DELETE"
             method="POST"
