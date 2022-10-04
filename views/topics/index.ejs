@@ -2,22 +2,26 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Club Members</h1>
-  <h2>All Topics</h2>
-
-  <h2>List of Topics</h2>
-  <!-- Try adding ejs -->
-  <div>
-    <ul>
-      <% topics.forEach(topic => { %>
-        <img src="<%= topic.owner.avatar %>" alt="<%= topic.owner.name %>">
-        <li>  
-          <a href="/topics/<%= topic._id %>"><%= topic.text %></a>
-          </li>
-      <% }) %>
-    </ul>
-</div>
-</section> 
+  <h1>The FLYERS CLUB</h1>
+  <% if (user) { %>
+    <h2>Add a Topic!</h2>
+    <form action="/topics" method="POST">
+      <label>
+        Topic: 
+        <input type="text" name="text" autocomplete="off">
+      </label>
+      <button type="submit">Add Topic</button>
+    </form>
+  <% } %>
+  <h2>All Topics!</h2>
+	<ul>
+  <% topics.forEach(topic => { %>
+    <li>
+      <a href="/topics/<%= topic._id %>"><%= topic.text %></a> 
+    </li>
+  <% }) %>
+  </ul>
+</section>
 
 
 <%- include('../partials/footer') %>

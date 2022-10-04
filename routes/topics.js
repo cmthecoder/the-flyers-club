@@ -8,7 +8,7 @@ const router = Router()
 router.get('/', topicsCtrl.index)
 router.get('/:id', topicsCtrl.show)
 router.post('/', isLoggedIn, topicsCtrl.create)
-router.post('/:id/comments', topicsCtrl.createComment)
+router.post('/:id/comments', isLoggedIn, topicsCtrl.createComment)
 
 export {
   router

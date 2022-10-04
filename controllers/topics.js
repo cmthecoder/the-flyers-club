@@ -48,11 +48,12 @@ function show(req,res) {
 }
 
 function createComment(req, res){
-  console.log("THIS IS BEFORE", req.body)
+  // console.log("THIS IS BEFORE", req.body)
   Topic.findById(req.params.id)
   .then(topic => {
-    console.log('THIS IS AFTER', req.body)
+    // console.log('THIS IS AFTER', req.body)
     topic.comments.push(req.body)
+    console.log("THIS IS REQ.BODY", req.body)
     topic.save()
     .then(() => {
       res.redirect(`/topics/${topic._id}`)
