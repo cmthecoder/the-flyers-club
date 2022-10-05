@@ -51,6 +51,7 @@ function createComment(req, res){
   // console.log("THIS IS BEFORE", req.body)
   Topic.findById(req.params.id)
   .then(topic => {
+    req.body.owner = req.user.profile._id
     // console.log('THIS IS AFTER', req.body)
     topic.comments.push(req.body)
     console.log("THIS IS REQ.BODY", req.body)
@@ -60,7 +61,42 @@ function createComment(req, res){
     })
     .catch(err => {
       console.log(err)
-      res.redirect('/')
+      res.redirect(`/topics/${topic._id}`)
+    })
+  })
+}
+
+function edit(req, res){
+  Topic.findById(req.params.topicId)
+  .then(topic => {
+    console.log("LOOKING FOR THIS!!!", req.params.topicId)
+    const comment = topic.comments.id(req.params.commentId)
+    const isSelf = topic._id.equals(req.user.profile._id)
+    res.render('topics/edit', {
+      topic,
+      title: "edit comment",
+      isSelf,
+      comment,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/topics')
+  })
+}
+
+function deleteComment(req, res) {
+  console.log('delete comment')
+}
+
+function update(req, res) {
+  Topic.findById(req.params.topicId)
+  .then(topic => {
+    const comment = topic.comments.id(req.params.commentId)
+    comment.content = req.body.content
+    topic.save()
+    .then(()=> {
+      res.redirect(`/topics/${topic._id}`)
     })
   })
   .catch(err => {
@@ -69,14 +105,12 @@ function createComment(req, res){
   })
 }
 
-function deleteComment(req, res) {
-  console.log('delete comment')
-}
-
 export {
   index,
   create,
   show,
   createComment,
   deleteComment,
+  edit,
+  update,
 }

@@ -26,10 +26,15 @@
           </tr>
         </thead>
         <tbody> 
-          <% topic.comments.forEach(function(comment) { %>
+          <% topic.comments.forEach(comment => { %>
             <tr>
               <td><%= comment.createdAt.toLocaleDateString() %></td>
               <td><%= comment.content %></td>
+              <td>
+                <% if (topic.owner.equals(user?.profile._id)) { %>
+                  <a href="/topics/<%= topic._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                <% } %>
+              </td>
             </tr>
           <% }) %>
           <tr>
