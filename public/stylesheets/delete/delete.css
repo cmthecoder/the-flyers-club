@@ -1,0 +1,17 @@
+/* views/index.ejs */
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+html{
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: inherit;
+}

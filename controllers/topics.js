@@ -85,10 +85,6 @@ function edit(req, res){
   })
 }
 
-function deleteComment(req, res) {
-  console.log('delete comment')
-}
-
 function update(req, res) {
   Topic.findById(req.params.topicId)
   .then(topic => {
@@ -104,6 +100,11 @@ function update(req, res) {
     res.redirect('/')
   })
 }
+
+function deleteComment(req, res) {
+  console.log('delete comment')
+}
+
 
 export {
   index,
