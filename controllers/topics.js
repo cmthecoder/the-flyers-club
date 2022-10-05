@@ -102,7 +102,21 @@ function update(req, res) {
 }
 
 function deleteComment(req, res) {
-  console.log('delete comment')
+  console.log('REQ.PARAMSID', req.params.id)
+  console.log('TOPICID', req.params.topicId)
+  Topic.findById(req.params.topicId)
+  .then(topic => {
+    console.log('LOOK HERE', topic)
+    topic.comments.remove({_id: req.params.commentId})
+    topic.save()
+    .then(() => {
+      res.redirect(`/topics/${topic._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/topics/${topic._id}`)
+    })
+  })
 }
 
 

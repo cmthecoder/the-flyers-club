@@ -31,6 +31,7 @@ nav {
 
 main {
   display: flex;
+  background-color: rgb(219, 25, 25);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -38,4 +39,18 @@ main {
 
 .right {
   margin-left: auto;
+}
+
+#user-avatar{
+  display: flex;
+  justify-content: center;
+}
+
+.club-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 950%;
+  font-family: 'Lalezar', cursive;
 }
