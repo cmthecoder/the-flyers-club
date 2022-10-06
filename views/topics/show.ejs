@@ -31,14 +31,12 @@
             <tr>
               <td><%= comment.createdAt.toLocaleDateString() %></td>
               <td><%= comment.content %></td>
-              <td>
-                <% if (topic.owner.equals(user?.profile._id)) { %>
-                  <a href="/topics/<%= topic._id %>/comments/<%= comment._id %>/edit">Edit</a>
-                  <form action="/topics/<%= topic._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                    <button class="btn" type="submit">X</button>
-                  </form>
-                <% } %>
-              </td>
+              <% if (topic.owner.equals(user?.profile._id)) { %>
+                <td><a href="/topics/<%= topic._id %>/comments/<%= comment._id %>/edit">Edit</a></td>
+                <td><form action="/topics/<%= topic._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                  <button class="btn" type="submit">X</button>
+                </form></td>
+              <% } %>
             </tr>
           <% }) %>
           <tr>

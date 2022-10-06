@@ -29,6 +29,7 @@ nav {
   min-height: 60px;
   justify-content: space-between;
   flex-direction: row;
+  font-size: 20px;
 }
 
 main {
@@ -61,7 +62,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 180px;
+  width: 190px;
+}
 
-  
+a:link {
+  text-decoration: none;
 }
