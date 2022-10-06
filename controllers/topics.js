@@ -1,4 +1,5 @@
 import { Topic } from "../models/topic.js"
+import { Profile } from "../models/profile.js"
 
 function index(req, res) {
   Topic.find({})
@@ -89,11 +90,15 @@ function update(req, res) {
   Topic.findById(req.params.topicId)
   .then(topic => {
     const comment = topic.comments.id(req.params.commentId)
-    comment.content = req.body.content
-    topic.save()
-    .then(()=> {
-      res.redirect(`/topics/${topic._id}`)
-    })
+    if(comment.owner.equals(req.user.profile._id)){
+      comment.content = req.body.content
+      topic.save()
+      .then(()=> {
+        res.redirect(`/topics/${topic._id}`)
+      })
+    } else {
+      throw new Error('not authorize')
+    }
   })
   .catch(err => {
     console.log(err)
@@ -107,15 +112,21 @@ function deleteComment(req, res) {
   Topic.findById(req.params.topicId)
   .then(topic => {
     console.log('LOOK HERE', topic)
-    topic.comments.remove({_id: req.params.commentId})
-    topic.save()
-    .then(() => {
-      res.redirect(`/topics/${topic._id}`)
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect(`/topics/${topic._id}`)
-    })
+    const comment = topic.comments.id(req.params.commentId)
+
+    if(comment.owner.equals(req.user.profile._id)){
+      topic.comments.remove({_id: req.params.commentId})
+      topic.save()
+      .then(() => {
+        res.redirect(`/topics/${topic._id}`)
+      })
+    } else {
+      throw new Error('not authorize')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/topics/${topic._id}`)
   })
 }
 
