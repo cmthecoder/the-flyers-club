@@ -4,9 +4,11 @@
 </head>
 <body>
   <nav>
-    <a href="/topics">✈️</a>
-    <a href="/">Home</a>
-    <a href="/profiles">🌎</a>
+    <div id="nav-bar">
+      <a href="/topics">✈️</a>
+      <a href="/">Home</a>
+      <a href="/profiles">🌎</a>
+  </div>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
