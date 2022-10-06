@@ -8,11 +8,7 @@ App: http://the-flyers-club-chris-m.fly.dev
 Trello: https://trello.com/b/7woxfGGm/theflyersclub
 
 
-<img src = "assets/images/connect-four.png" alt= "Connect Four game with a background of other board games">
 
-<img src = "/public/images/club3.png" alt= "">
-<img src = "/public/images/club.png" alt= "">
-<img src = "/public/images/club2.png" alt= "">
 
 
 
