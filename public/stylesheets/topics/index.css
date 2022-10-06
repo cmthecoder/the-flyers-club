@@ -1,3 +1,5 @@
+
+
 h1{
   font-size: 60px;
 }
@@ -18,8 +20,6 @@ li{
   font-size: 30px;
 }
 
-
-
-/* body{
-  background-image: url("/public/images/1307258.jpg");
-} */
+#topics-list{
+  color: white;
+}

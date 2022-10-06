@@ -20,7 +20,7 @@
 	<ul>
   <% topics.forEach(topic => { %>
     <li>
-      <a href="/topics/<%= topic._id %>"><%= topic.text %></a> 
+      <a id="topics-list" href="/topics/<%= topic._id %>"><%= topic.text %></a> 
     </li>
   <% }) %>
   </ul>
