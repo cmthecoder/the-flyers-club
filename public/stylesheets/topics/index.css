@@ -1,3 +1,25 @@
+h1{
+  font-size: 60px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+input, button{
+  font-size: 20px;
+}
+
 section{
   padding-left: 20px;
 }
+
+li{
+  font-size: 30px;
+}
+
+
+
+/* body{
+  background-image: url("/public/images/1307258.jpg");
+} */

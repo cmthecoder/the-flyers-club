@@ -1,0 +1,27 @@
+section {
+  padding-left: 30px;
+}
+
+h1{
+  font-size: 40px;
+}
+
+h2{
+  font-size: 25px;
+}
+
+label{
+  font-size: 25px;
+}
+
+tr{
+  font-size: 23px;
+}
+
+button{
+  font-size: 15px;
+}
+
+textarea {
+  font-size: 20px;
+}

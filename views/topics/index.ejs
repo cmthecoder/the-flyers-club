@@ -10,14 +10,13 @@
   <% if (user) { %>
     <h2>Add a Topic!</h2>
     <form action="/topics" method="POST">
-      <label>
-        Topic: 
-        <input type="text" name="text" autocomplete="off">
+      <label> 
+        <input type="text" name="text" autocomplete="off" placeholder="New regulation...">
       </label>
-      <button type="submit">Add Topic</button>
+      <button type="submit">Submit</button>
     </form>
   <% } %>
-  <h2>All Topics!</h2>
+  <h2>All Topics:</h2>
 	<ul>
   <% topics.forEach(topic => { %>
     <li>
