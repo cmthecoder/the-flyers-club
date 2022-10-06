@@ -9,9 +9,9 @@ Trello: https://trello.com/b/7woxfGGm/theflyersclub
 
 
 
-<img src = "/images/club3.png" alt= "">
-<img src = "/images/club.png" alt= "">
-<img src = "/images/club2.png" alt= "">
+<img src = "public/images/club3.png" alt= "">
+<img src = "public/images/club.png" alt= "">
+<img src = "public/images/club2.png" alt= "">
 
 
 
