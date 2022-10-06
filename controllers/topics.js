@@ -7,7 +7,7 @@ function index(req, res) {
     // console.log('THIS IS AN EXPERIENCE', experiences)
     res.render('topics/index', {
       topics,
-      title: "🛫",
+      title: "🛫 Club Topics",
     })
   })
   .catch(err => {
@@ -38,7 +38,7 @@ function show(req,res) {
     console.log('THIS A TOPIC', topic)
     res.render('topics/show', {
       topic,
-      title: '🛫'
+      title: '🛫 THE FLYERS CLUB'
     })
   })
   .catch(err => {
