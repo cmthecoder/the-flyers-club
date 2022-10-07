@@ -9,9 +9,9 @@ Trello: https://trello.com/b/7woxfGGm/theflyersclub
 
 
 
-<img src = "public/images/club3.png" alt= "">
-<img src = "public/images/club.png" alt= "">
-<img src = "public/images/club2.png" alt= "">
+<img src = "public/images/club3.png" alt= "screenshot of app">
+<img src = "public/images/club.png" alt= "screenshot of app">
+<img src = "public/images/club2.png" alt= "screenshot of app">
 
 
 
@@ -23,6 +23,7 @@ Trello: https://trello.com/b/7woxfGGm/theflyersclub
 - Create a thread for an individual comment
 - Add a mobile app feature
 - Change navbar icons
+- Use bootstrap to change the look of the buttons
 
 
 ### Credits

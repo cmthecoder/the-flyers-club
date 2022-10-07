@@ -1,5 +1,6 @@
 body{
   background-image: url('https://i.imgur.com/CyIPkyW.jpg');
+  font-size: 40px;
 }
 
 main{
@@ -15,4 +16,12 @@ form{
 
 button{
   width: 80px;
+}
+
+textarea{
+  font-size: 20px;
+}
+
+button {
+  margin-top: 10px;
 }
