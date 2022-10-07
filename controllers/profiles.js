@@ -67,7 +67,7 @@ function edit(req, res){
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render('profiles/edit', {
       profile,
-      title: "edit 🛫",
+      title: "edit plane 🛫",
       isSelf,
       plane,
     })

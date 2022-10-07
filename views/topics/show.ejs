@@ -22,15 +22,15 @@
       <table>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Comment</th>
+            <th id="date">Date</th>
+            <th>Comments</th>
           </tr>
         </thead>
         <tbody> 
           <% topic.comments.forEach(comment => { %>
-            <tr>
-              <td><%= comment.createdAt.toLocaleDateString() %></td>
-              <td><%= comment.content %></td>
+            <tr id="date-comment">
+              <td id="date"><%= comment.createdAt.toLocaleDateString() %></td>
+              <td id="comment"><%= comment.content %></td>
               <% if (comment.owner.equals(user?.profile._id)) { %>
                 <td><a href="/topics/<%= topic._id %>/comments/<%= comment._id %>/edit">Edit</a></td>
                 <td><form action="/topics/<%= topic._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
