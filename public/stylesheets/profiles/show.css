@@ -1,3 +1,10 @@
-main{
-  background-color: rgb(43, 144, 232);
+main {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 25px;
 }
+
+body {
+  background-image: url('https://i.imgur.com/SN7TEVL.jpg');
+}
+
+/* Edit image */

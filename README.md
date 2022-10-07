@@ -21,6 +21,8 @@ Trello: https://trello.com/b/7woxfGGm/theflyersclub
 ### Next Steps
 - Add feature so that users and guest can like a comment
 - Create a thread for an individual comment
+- Add a mobile app feature
+- Change navbar icons
 
 
 ### Credits

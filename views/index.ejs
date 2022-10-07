@@ -9,15 +9,5 @@
 <main>
   <h1>Welcome to The Flyers Club</h1>
 </main>
-<div id="user-avatar">
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
-</div>
 <div class="club-name">THE FLYERS CLUB</div>
 <%- include('./partials/footer') %>
