@@ -29,3 +29,17 @@ textarea {
 body{
   background-image: url('https://i.imgur.com/CyIPkyW.jpg');
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

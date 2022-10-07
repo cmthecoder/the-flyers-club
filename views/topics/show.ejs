@@ -6,7 +6,7 @@
   <h1><%= topic.text %> </h1>
   <% if (user) { %>
     <h2>Add to discussion</h2>
-    <form 
+    <form
       action="/topics/<%= topic._id %>/comments"
       method="POST"
     >
