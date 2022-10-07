@@ -4,8 +4,8 @@
 
 
 ### Getting started
-App: http://the-flyers-club-chris-m.fly.dev
-Trello: https://trello.com/b/7woxfGGm/theflyersclub
+- App: http://the-flyers-club-chris-m.fly.dev
+- Trello: https://trello.com/b/7woxfGGm/theflyersclub
 
 
 
@@ -19,11 +19,12 @@ Trello: https://trello.com/b/7woxfGGm/theflyersclub
 - HTML, CSS, JavaScript, MongoDB, Node.js, Google OAuth
 
 ### Next Steps
-- Add feature so that users and guest can like a comment
+- Add feature so that users and guests can like a comment
 - Create a thread for an individual comment
-- Add a mobile app feature
+- Make the app mobile responsive
 - Change navbar icons
 - Use bootstrap to change the look of the buttons
+- Create a function that will generate random quotes on landing page
 
 
 ### Credits

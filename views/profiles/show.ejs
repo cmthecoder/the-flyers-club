@@ -45,13 +45,13 @@
       <h3>
         <%= plane.brand %> <%= plane.model %> <%= plane.color %>
         <% if (isSelf) { %>
-          <a href="/profiles/<%= profile._id %>/planes/<%= plane._id %>/edit">Edit a plane</a>
+          <a href="/profiles/<%= profile._id %>/planes/<%= plane._id %>/edit">Edit</a>
           <form 
             action="/profiles/planes/<%= plane._id %>?_method=DELETE"
             method="POST"
             style="display: inline-block;"
           >
-            <button type="submit">Delete <%= plane.brand %> <%= plane.model %></button>
+            <button id="delete-plane" type="submit">Delete</button>
           </form>
         <% } %>   
       </h3>

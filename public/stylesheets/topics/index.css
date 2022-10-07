@@ -26,3 +26,6 @@ li{
   color: white;
 }
 
+li:hover {
+  color: black;
+}

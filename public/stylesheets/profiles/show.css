@@ -4,7 +4,11 @@ main {
 }
 
 body {
-  background-image: url('https://i.imgur.com/SN7TEVL.jpg');
+  background-image: url('https://i.imgur.com/CyIPkyW.jpg');
+  color: white;
 }
 
-/* Edit image */
+
+#delete-plane {
+  font-size: 20px;
+}
