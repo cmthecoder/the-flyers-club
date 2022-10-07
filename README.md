@@ -4,7 +4,7 @@
 
 
 ### Getting started
-- App: http://the-flyers-club-chris-m.fly.dev
+- App: https://the-flyers-club-chris-mems.fly.dev/
 - Trello: https://trello.com/b/7woxfGGm/theflyersclub
 
 
