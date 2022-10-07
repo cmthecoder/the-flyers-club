@@ -16,7 +16,12 @@
 
 
 ### Technologies used
-- HTML, CSS, JavaScript, MongoDB, Node.js, Google OAuth
+- HTML
+- CSS
+- JavaScript
+- MongoDB
+- Node.js
+- Google OAuth
 
 ### Next Steps
 - Add feature so that users and guests can like a comment

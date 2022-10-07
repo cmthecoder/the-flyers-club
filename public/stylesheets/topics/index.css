@@ -3,11 +3,11 @@ body{
 }
 
 h1{
-  font-size: 60px;
+  font-size: 68px;
 }
 
 h2{
-  font-size: 30px;
+  font-size: 40px;
 }
 
 input, button{
@@ -19,7 +19,7 @@ section{
 }
 
 li{
-  font-size: 30px;
+  font-size: 40px;
 }
 
 #topics-list{
