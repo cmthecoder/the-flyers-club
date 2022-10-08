@@ -7,18 +7,18 @@ main{
   background-color: rgba(0, 0, 0, 0);
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-button{
+button {
   width: 80px;
 }
 
-textarea{
+textarea {
   font-size: 20px;
 }
 
