@@ -1,5 +1,9 @@
 body{
   background-image: url('https://i.imgur.com/o6PTfoV.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #d5d5d5;
+  height: 100vh;
 }
 
 h1{
