@@ -70,7 +70,7 @@ function createComment(req, res){
 function edit(req, res){
   Topic.findById(req.params.topicId)
   .then(topic => {
-    console.log("LOOKING FOR THIS!!!", req.params.topicId)
+    // console.log("LOOKING FOR THIS!!!", req.params.topicId)
     const comment = topic.comments.id(req.params.commentId)
     const isSelf = topic._id.equals(req.user.profile._id)
     res.render('topics/edit', {
@@ -107,8 +107,8 @@ function update(req, res) {
 }
 
 function deleteComment(req, res) {
-  console.log('REQ.PARAMSID', req.params.id)
-  console.log('TOPICID', req.params.topicId)
+  // console.log('REQ.PARAMSID', req.params.id)
+  // console.log('TOPICID', req.params.topicId)
   Topic.findById(req.params.topicId)
   .then(topic => {
     console.log('LOOK HERE', topic)
